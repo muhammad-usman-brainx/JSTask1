@@ -40,11 +40,13 @@
             </div>
             <div class="mb-3">
                 <label for="age">Age:<sup>*</sup></label>
-                <input type="number" min="18" max="150" class="form-control" id="age" placeholder="Enter Age" name="age" required>
+                <input type="number" min="18" max="150" onchange="validateAge()" class="form-control" id="age" placeholder="Enter Age" name="age" required>
+                <p id="age-warn"></p>
             </div>
             <div class="mb-3">
                 <label for="contact">Contact:</label>
                 <input type="number" onchange="checkElevenDigit()" class="form-control" id="contact" placeholder="Enter Contact Number" name="contact">
+                <p id="contact-warn"></p>
             </div>
           
           <button disabled id="submit-button" type="submit" class="btn btn-primary" onclick="validateForm()">Submit</button>
